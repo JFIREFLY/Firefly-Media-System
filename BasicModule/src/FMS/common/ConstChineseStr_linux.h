@@ -1,0 +1,5 @@
+#ifndef _CONST_CHINESE_STR_LINUX_H_
+#define _CONST_CHINESE_STR_LINUX_H_
+
+
+#endif // !_CONST_CHINESE_STR_LINUX_H_

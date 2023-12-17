@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\common">
+      <UniqueIdentifier>{914d67cd-e5d4-4b0b-b0c1-60ab5b4410bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\core">
+      <UniqueIdentifier>{7d265d02-071f-44a9-adb9-b222c3bac97e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{973d7625-ac8d-4b9b-8abe-f29e9c7ea219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\core">
+      <UniqueIdentifier>{2a58d12b-b9bf-4480-bd5e-7b8de4fef7e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\app">
+      <UniqueIdentifier>{4823ac5d-e075-4a55-9f6d-aa4306a15a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\app">
+      <UniqueIdentifier>{8bce03d6-6fd7-40ee-bbbc-ed4452c3b0b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\http">
+      <UniqueIdentifier>{84ff6c3e-81a7-47de-bd13-6c4cf191e516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\http">
+      <UniqueIdentifier>{ee30136e-0358-495a-a519-6ba8e56206de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\ConstChineseStr_windows.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ConstChineseStr_linux.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonDef.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\FmsLog.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\atomic_queue.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\defs.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\mdump.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\stringconv.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tinystr.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tinyxml.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\json.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\OTcpServer.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\OThread.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Public.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\BigDecimal.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonTools.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\OBasisInit.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\OEvent.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\OLogger.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="core\OServer.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\OResource.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\IService.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Config.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ConfigFile.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="app\OHttpService.h">
+      <Filter>头文件\app</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XQueue.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="http\HttpClient.h">
+      <Filter>头文件\http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\OHttpServer.h">
+      <Filter>头文件\http</Filter>
+    </ClInclude>
+    <ClInclude Include="http\RestClientPool.h">
+      <Filter>头文件\http</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\FmsLog.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Config.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\OLogger.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\mdump.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\stringconv.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tinystr.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tinyxml.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tinyxmlerror.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tinyxmlparser.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\jsoncpp.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\OTcpServer.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\OThread.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Public.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\BigDecimal.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CommonTools.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ConfigFile.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\OBasisInit.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\OEvent.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="fms.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="core\OResource.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\OServer.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="app\OHttpService.cpp">
+      <Filter>源文件\app</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XQueue.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="http\HttpClient.cpp">
+      <Filter>源文件\http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\OHttpServer.cpp">
+      <Filter>源文件\http</Filter>
+    </ClCompile>
+    <ClCompile Include="http\RestClientPool.cpp">
+      <Filter>源文件\http</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

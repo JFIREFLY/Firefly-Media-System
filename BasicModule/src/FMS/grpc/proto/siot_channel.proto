@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+package CMS.SIOT;
+
+enum SIOTChannelResponseCode{
+    Success=0;
+    DuplicateTraceId=1;//重复的traceid
+    RequestCancel=2;//请求已超时
+    Unknow=9999;//未知异常
+}
+
+message SIOTChannelResponse{//要cms给信息？
+    string traceId=1;//cms接收完成后返回给siot的traceId
+    SIOTChannelResponseCode code=2;
+    string msg=3;
+}
+
+enum SIOTChangeTagQuality{
+    Good=0;
+    NotExist=1;
+    NotFormat=2;
+    DeviceDisconnect=3;
+    Other=4;
+    NotInited = 9999;//枚举不能为负数
+}
+
+message SIOTChangeTagDataItem{
+    string name=1;
+    string data=2;
+    SIOTChangeTagQuality quality=3;
+}
+
+message SIOTChangeHeaderTraceTimespend{
+    int32 collect=1;
+    int64 collect_end=2;
+    int64 collect_start=3;
+    int32 dirver=4;
+    int32 proc=5;
+    int64 proc_end=6;
+    int64 proc_start=7;
+    int32 report=8;
+    int64 report_end=9;
+    int64 report_start=10;
+}
+message SIOTChangeHeaderTrace{
+    int32 code=1;
+    string module=2;
+    string msg=3;
+    SIOTChangeHeaderTraceTimespend submodule_timespend=4;
+    int32 timespend=5;
+}
+message SIOTChangeHeader{
+    int32 code=1;
+    string cur_module=2;
+    string msg=3;
+    int32 timespend=4;
+    SIOTChangeHeaderTrace tracelist=5;
+}
+message SIOTChangeRequest{
+    repeated SIOTChangeTagDataItem tagData = 1;
+    string timestamp = 2;
+    SIOTChangeHeader header=3;
+}
+
+
+service SIOTChannel {
+    //双向流式处理，有序传入但是可能是无序返回
+    rpc Changed (stream SIOTChangeRequest) returns (stream SIOTChannelResponse);
+}
+/*
+Postman message  
+{
+    "tagDatas":[
+        {
+            "name": "DateTime",
+            "data":"20231207T011046Z",
+            "quality":0
+        },
+        {
+            "name": "Time",
+            "data":"091046",
+            "quality":0
+        }
+    ],
+    "timestamp": "20231207T011046Z",
+    "header": {
+        "code": 0,
+        "cur_module": "siot",
+        "msg": "success",
+        "timespend": 0,
+        "tracelist": {
+            "code": 0,
+            "module": "siot",
+            "msg": "success",
+            "submodule_timespend": {
+                "collect": 0,
+                "collect_end": 1701911446030,
+                "collect_start": 1701911446030,
+                "driver": 0,
+                "proc": 0,
+                "proc_end": 1701911446030,
+                "proc_start": 1701911446030,
+                "report": 0,
+                "report_end": 1701911446030,
+                "report_start": 1701911446030
+            },
+            "timespend": 0
+        }
+    }
+}
+*/

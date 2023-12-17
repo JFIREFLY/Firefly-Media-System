@@ -1,0 +1,10 @@
+protoc -I . --cpp_out=. ./hello.proto#生成hello.pb.cc文件
+ 
+protoc --grpc_out=./ --plugin=protoc-gen-grpc=grpc_cpp_plugin.exe hello.proto  
+
+-I :（-IPATH）指定要在其中搜索导入（import）的目录。可指定多次，目录将按顺序搜索。如果没有给出，则使用当前工作目录。
+--cpp_out = . : 以c++语言格式输出，等号后面为输出文件存放的路径
+--grpc_out = . :输出grpc框架接口文件。等号后面为输出文件存放的路径
+--plugin=protoc-gen-grpc=grpc_cpp_plugin.exe :指定一个protobuf插件（grpc_cpp_plugin）来生成grpc代码。
+ 
+hello.proto : 核心文件，可以是路径./hello.proto,或者绝对路径。
